@@ -1,4 +1,4 @@
-import CurrencyDollarIcon from "@heroicons/react/24/outline/CurrencyDollarIcon";
+import CurrencyDollarIcon from "@heroicons/react/24/solid/CurrencyDollarIcon";
 
 function Navbar() {
   return (

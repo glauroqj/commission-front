@@ -1,7 +1,7 @@
 import { useUploadDocument } from "@/hooks";
-import ArrowPathIcon from "@heroicons/react/24/outline/ArrowPathIcon";
-import DocumentIcon from "@heroicons/react/24/outline/DocumentIcon";
-import LockClosedIcon from "@heroicons/react/24/outline/LockClosedIcon";
+import ArrowPathIcon from "@heroicons/react/24/solid/ArrowPathIcon";
+import DocumentIcon from "@heroicons/react/24/solid/DocumentIcon";
+import LockClosedIcon from "@heroicons/react/24/solid/LockClosedIcon";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
@@ -196,7 +196,7 @@ export function HomePage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70 cursor-pointer"
             >
               {isSubmitting ? (
                 <>

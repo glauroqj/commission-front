@@ -1,8 +1,13 @@
 import axios from "axios";
+import packageJson from "../../../package.json";
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL ?? "/api",
-  timeout: 10000,
+  baseURL: import.meta.env.VITE_API_URL,
+  timeout: 20000,
+  headers: {
+    "Content-Type": "application/json",
+    "x-app-name": `comission-front.v${packageJson.version}`,
+  },
 });
 
 api.interceptors.response.use(
