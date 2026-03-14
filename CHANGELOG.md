@@ -1,4 +1,4 @@
-## [1.0.1](https://github.com/glauroqj/comission-front/compare/v1.0.0...v1.0.1) (2026-03-14)
+## [1.0.1](https://github.com/glauroqj/commission-front/compare/v1.0.0...v1.0.1) (2026-03-14)
 
 # 1.0.0 (2026-03-14)
 

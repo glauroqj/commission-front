@@ -6,7 +6,7 @@ export const api = axios.create({
   timeout: 20000,
   headers: {
     "Content-Type": "application/json",
-    "x-app-name": `comission-front.v${packageJson.version}`,
+    "x-app-name": `commission-front.v${packageJson.version}`,
   },
 });
 
