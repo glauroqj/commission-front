@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import {
   documentFormSchema,
   type DocumentFormValues,
-} from "./documentFormSchema";
+} from "./schema/documentFormSchema";
 
 type LoadingState = "idle" | "processing-file" | "submitting";
 
@@ -55,11 +55,13 @@ export function HomePage() {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: {
-      "application/msword": [".doc"],
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-        [".docx"],
+      "application/vnd.ms-excel": [".xls"],
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [
+        ".xlsx",
+      ],
     },
     maxFiles: 1,
+    maxSize: 15 * 1024 * 1024, // 15MB
     disabled: loadingState === "processing-file" || uploadMutation.isPending,
     noClick: loadingState === "processing-file" || uploadMutation.isPending,
     noKeyboard: loadingState === "processing-file" || uploadMutation.isPending,
@@ -178,7 +180,7 @@ export function HomePage() {
                 )}
               </div>
               <div className="mt-2 flex items-center justify-between text-xs text-gray-500">
-                <span>Accepted File Types: .doc and .docx only</span>
+                <span>Accepted File Types: .xls and .xlsx only (max 15MB)</span>
                 <span className="flex items-center gap-1">
                   <LockClosedIcon className="h-3.5 w-3.5" />
                   Secure
